@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="https://www.av01.xyz/static/av01-icon-export.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#ff5398" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AV01.tv" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="msapplication-TileColor" content="#ff5398" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <!-- iOS Splash Screen -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="https://www.av01.xyz/static/pwa-192x192.png" />
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="/api/v1/sitemap/master.xml">
+
+  <title>AV01.tv | 高品質な無料AV動画のストリーミング</title>
+  <meta name="description" content="高品質なエロ動画を無料でストリーミング。ダウンロード不要で、いつでもどこでも視聴可能" />
+  <meta name="keywords"
+    content="AV01, avゼロワン, AV01.tv, AV01テレビ, avゼロワンテレビ, エロ動画, 無料AV, 高品質AV, ストリーミングAV, エロビデオ, 無料エロ動画, AV動画, 無料AV動画" />
+
+  <!-- Performance Optimization: Pre-warm TLS handshakes for media domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://static.av01.tv">
+  <link rel="preconnect" href="https://static2.av01.tv">
+  <link rel="preconnect" href="https://customers.iw01.xyz" crossorigin>
+  <link rel="dns-prefetch" href="https://customers.iw01.xyz">
+  <link rel="preconnect" href="https://files.iw01.xyz" crossorigin>
+  <link rel="preconnect" href="https://files.iw01.xyz">
+  <link rel="dns-prefetch" href="https://files.iw01.xyz">
+  <link rel="preload" href="https://files.iw01.xyz/edge/geo.js?json" as="fetch" crossorigin fetchpriority="high">
+  <link rel="preload" href="https://customers.iw01.xyz/ping" as="fetch" crossorigin>
+  <link rel="preload" href="https://files.iw01.xyz/ping" as="image">
+
+
+  <!-- Build Information -->
+  <meta name="build-time" content="Mon, 21 Sep 2026 03:25:56 GMT">
+
+  <script>
+    // Self-healing for asset version mismatch (ChunkLoadError or 404 on scripts/links)
+    (function () {
+      function reload() {
+        const RELOAD_KEY = 'av01_asset_fail_reload';
+        const now = Date.now();
+        const lastReload = parseInt(sessionStorage.getItem(RELOAD_KEY) || '0');
+        // Max 1 reload per 30 seconds to prevent infinite loops if the server is actually down
+        if (now - lastReload > 30000) {
+          sessionStorage.setItem(RELOAD_KEY, now.toString());
+          window.location.reload();
+        }
+      }
+
+      // Catch failed <script> and <link> tags (e.g. hashed assets)
+      window.addEventListener('error', function (e) {
+        if (e.target && (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK')) {
+          const url = e.target.src || e.target.href;
+          if (url && (url.includes('/assets/') || url.includes('/static/'))) {
+            reload();
+          }
+        }
+      }, true);
+
+      // Catch failed dynamic imports (lazy loading)
+      window.addEventListener('unhandledrejection', function (e) {
+        if (e.reason && (e.reason.name === 'ChunkLoadError' || /Loading chunk|Failed to fetch dynamically imported module/.test(e.reason.message))) {
+          reload();
+        }
+      });
+    })();
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "6a3fe8184ec34bd5a610ec71a93249fc"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script type="module" crossorigin src="/assets/index-DmQK3kIV.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BZ7q5uIM.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
